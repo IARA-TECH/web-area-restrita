@@ -1,0 +1,52 @@
+name: CI/CD - Área Restrita (com Docker)
+
+on:
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+    branches: ["main", "develop"]
+
+jobs:
+  # =====================
+  # JOB 1: Continuous Integration (CI)
+  # =====================
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar ESLint
+        run: npm run lint
+
+      - name: Verificar dependências vulneráveis
+        run: npm audit --audit-level=moderate
+
+      - name: Build do projeto
+        run: npm run build
+
+  # =====================
+  # JOB 2: Continuous Delivery (CD com Docker)
+  # =====================
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: build-test
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t area-restrita:latest .
+
+      - name: Testar container Docker
+        run: |
+          docker run -d -p 3000:3000 --name test-container area-restrita:latest
+          sleep 15
+          docker ps | grep test-container
+          docker stop test-container
+          docker rm test-container
