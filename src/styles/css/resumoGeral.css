@@ -1,0 +1,51 @@
+.resumo-page {
+  display: flex;
+  height: 100vh;
+  background-color: #d3d9f7;
+}
+
+.resumo-main {
+  margin-left: 220px;
+  padding: 20px;
+  flex: 1;
+}
+
+.resumo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.resumo-header h1 {
+  color: #202a78;
+  font-size: 1.8rem;
+}
+
+.resumo-header button {
+  background-color: #3541b0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resumo-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #474cbf;
+  border-radius: 8px;
+}
+
+.card.small {
+  height: 100px;
+}
+
+.card.large {
+  height: 300px;
+}
