@@ -1,27 +1,23 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./Files/Login.jsx";
-import ResumoGeral from "./Files/resumoGeral.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Home from "./pages/Home/Home.jsx"
+import './App.css';
 
-function App() {
+export default function App() {
   const autenticado = localStorage.getItem("autenticado") === "true";
 
   return (
     <Router>
       <Routes>
-        {/* Página de login */}
-        <Route path="/" element={autenticado ? <Navigate to="/resumo" /> : <Login />} />
-
-        {/* Página de resumo, protegida */}
-        <Route
-          path="/resumo"
-          element={autenticado ? <ResumoGeral /> : <Navigate to="/" />}
+        <Route 
+          path="/" 
+          element={autenticado ? <Navigate to="/home" /> : <Login />} 
         />
-
-        {/* Redireciona qualquer rota desconhecida */}
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route 
+          path="/home/*" 
+          element={autenticado ? <Home /> : <Navigate to="/" />} 
+        />
       </Routes>
     </Router>
   );
 }
-
-export default App;
