@@ -1,38 +1,104 @@
 .sidebar {
-    width: 220px;
-    height: 100vh;
-    background-color: #202a78;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    position: fixed;
-  }
-  
-  .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .menu a {
-    color: #d3d3ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-  
-  .menu a:hover,
-  .menu a.active {
-    background-color: #3541b0;
-    color: white;
-    border-radius: 6px;
-    padding: 8px;
-  }
-  
+  background-color: #ffffff;
+  color: white;
+  height: 100vh;
+  transition: width 0.3s ease;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.closed {
+  width: 75px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.open {
+  width: 260px;
+  transition: width 0.3s ease;
+
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 90%;
+  align-self: center;
+}
+
+.toggle-btn {
+  width: 20px;
+  cursor: pointer;
+}
+
+.toggle-btn.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.iarinha {
+  width: 50px;
+  margin-bottom: 32px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4C53AD;
+  background: transparent;
+}
+
+.menu-item:hover {
+  background: rgba(76, 83, 173, 0.3);
+}
+
+.menu-item.active {
+  background: rgba(76, 83, 173, 0.91);
+  color: #fff;
+  font-weight: 600;
+  transition: width 0.3s ease;
+}
+
+.menu-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar.closed .menu-item {
+  justify-content: center;
+  width: 55px;
+  padding: 10px 0;
+  transition: width 0.3s ease;
+}
+
+.sidebar.open .menu-item {
+  justify-content: flex-start;
+  width: 90%;
+  padding: 10px 18px;
+  transition: width 0.3s ease;
+}
