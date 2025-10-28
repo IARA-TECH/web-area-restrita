@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
-import iara from "../../assets/iara.svg";
-import iarinha from "../../assets/iarinha.svg";
-import ic_menu from "../../assets/ic_menu.svg";
-import ic_dashboard from "../../assets/ic_dashboards.svg";
-import ic_dashboard_active from "../../assets/ic_dashboards_active.svg";
-import ic_feira from "../../assets/ic_feira.svg";
-import ic_feira_active from "../../assets/ic_feira_active.svg";
+import iara from "../../../assets/iara.svg";
+import iarinha from "../../../assets/iarinha.svg";
+import ic_menu from "../../../assets/ic_menu.svg";
+import ic_dashboard from "../../../assets/ic_dashboards.svg";
+import ic_dashboard_active from "../../../assets/ic_dashboards_active.svg";
+import ic_feira from "../../../assets/ic_feira.svg";
+import ic_feira_active from "../../../assets/ic_feira_active.svg";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
