@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "../../components/Sidebar/Sidebar.jsx";
 import Dashboard from "../Dashboards/Dashboards.jsx";
 import Expotech from "../Expotech/Expotech.jsx";
-import "./Home.css";
+import "../../styles/Home.css";
 
 export default function Home() {
   return (

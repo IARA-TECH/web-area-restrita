@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./Sidebar.css";
+import "../../styles/Sidebar.css";
 
 import iara from "../../../assets/iara.svg";
 import iarinha from "../../../assets/iarinha.svg";

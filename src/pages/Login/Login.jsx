@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import boneca from "../../images/boneca.jpeg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
+import boneca from "../../images/iara-esquerda.png";
 import logo from "../../images/logo.jpeg";
 
-import "./Login.css";
+import "../../styles/Login.css";
 
-export default function Login() {
+export default function Login({ setAutenticado }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const emailCorreto = "iaratech.oficial@gmail.com";
-    const senhaCorreta = "123";
-
-    if (email === emailCorreto && senha === senhaCorreta) {
+    try {
+      await signInWithEmailAndPassword(auth, email, senha);
       localStorage.setItem("autenticado", "true");
-      window.location.href = "/home";
-    } else {
+      setAutenticado(true);
+    } catch (error) {
+      console.error("Erro ao fazer login:", error.code, error.message);
       alert("❌ E-mail ou senha incorretos!");
     }
   };

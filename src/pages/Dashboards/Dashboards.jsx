@@ -1,5 +1,5 @@
 import PowerBIReport from "../../components/PowerBI/PowerBI";
-import "./Dashboards.css";
+import "../../styles/Dashboards.css";
 
 export default function Dashboard() {
   return (

@@ -1,4 +1,4 @@
-import "./Expotech.css";
+import "../../styles/Expotech.css";
 
 export default function Expotech() {
   return (
