@@ -65,7 +65,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
-  padding: 2.5rem;
+  padding: 2rem;
   border-radius: 12px;
   width: 90%;
   color: #313682;
@@ -159,4 +159,14 @@ body, html {
   height: auto;
   margin-right: 130px;
   animation: float 3s ease-in-out infinite;
+}
+
+#btn-back {
+  background-color: #6b71ca;
+  transition: 1s;
+}
+
+#btn-back:hover {
+  background-color: #3e47bc;
+  transition: 1s;
 }

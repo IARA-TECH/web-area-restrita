@@ -59,7 +59,13 @@ export default function Login() {
               />
 
               <button type="submit">ENTRAR</button>
-            </form>
+              <button
+                type="button"
+                id="btn-back"
+                onClick={() => navigate(-1)}
+              >
+                VOLTAR PARA PÁGINA INICIAL
+              </button>            </form>
           </div>
         </div>
       </div>
