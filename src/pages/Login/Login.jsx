@@ -42,7 +42,7 @@ export default function Login() {
               <input
                 type="email"
                 id="email"
-                placeholder="exemplo@email.com"
+                placeholder="Insira seu e-mail"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -52,7 +52,7 @@ export default function Login() {
               <input
                 type="password"
                 id="senha"
-                placeholder="Senha123"
+                placeholder="Insira sua senha"
                 required
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
