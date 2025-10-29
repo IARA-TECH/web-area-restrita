@@ -56,7 +56,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: ⬇Baixar build gerado
+      - name: Baixar build gerado
         uses: actions/download-artifact@v4
         with:
           name: build
