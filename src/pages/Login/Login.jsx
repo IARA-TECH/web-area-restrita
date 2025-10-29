@@ -33,8 +33,8 @@ export default function Login() {
 
       <div className="right-side">
         <div className="login-box">
-          <img src={logo} alt="Logo IARA" className="logo" />
-          <h2>Bem-Vindo de Volta!</h2>
+          <img src={logo} alt="Logo IARA" className="logo-iara" />
+          <h2>Bem-vindo de volta!</h2>
 
           <div className="inputs-box">
             <form onSubmit={handleSubmit}>
@@ -59,7 +59,13 @@ export default function Login() {
               />
 
               <button type="submit">ENTRAR</button>
-            </form>
+              <button
+                type="button"
+                id="btn-back"
+                onClick={() => navigate(-1)}
+              >
+                VOLTAR PARA PÁGINA INICIAL
+              </button>            </form>
           </div>
         </div>
       </div>

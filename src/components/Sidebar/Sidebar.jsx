@@ -9,6 +9,7 @@ import ic_dashboard from "../../../assets/ic_dashboards.svg";
 import ic_dashboard_active from "../../../assets/ic_dashboards_active.svg";
 import ic_feira from "../../../assets/ic_feira.svg";
 import ic_feira_active from "../../../assets/ic_feira_active.svg";
+import ic_sair from "../../../assets/ic_sair_sidebar.svg";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,11 @@ export default function Sidebar() {
   const handleNavigate = (route) => {
     setActive(route);
     navigate(`/home/${route}`);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.href = '/';
   };
 
   useEffect(() => {
@@ -80,6 +86,19 @@ export default function Sidebar() {
             {isOpen && <span>Dashboards</span>}
           </div>
         </nav>
+      </div>
+
+      <div className="bottom-section">
+        <div
+          className="menu-item logout-btn"
+          onClick={handleLogout}
+        >
+          <img
+            src={ic_sair}
+            alt="Sair"
+          />
+          {isOpen && <span>Sair</span>}
+        </div>
       </div>
     </aside>
   );
