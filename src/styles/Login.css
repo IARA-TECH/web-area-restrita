@@ -8,7 +8,7 @@
 body, html {
   height: 100%;
   background-color: rgb(244, 244, 252);
-  background-image: url(../../images/fundo-cadastro.png);
+  background-image: url(../images/fundo-cadastro.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -67,7 +67,7 @@ body, html {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  width: 90%;
+  width: 70%;
   color: #313682;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -155,9 +155,9 @@ body, html {
 }
 
 .mascote {
-  max-width: 80%;
+  max-width: 60%;
   height: auto;
-  margin-right: 130px;
+  margin-right: 70px;
   animation: float 3s ease-in-out infinite;
 }
 
