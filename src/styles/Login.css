@@ -103,7 +103,7 @@ body, html {
   font-size: 0.8rem;
 }
 
-.login-box button {
+.btn-login {
   width: 100%;
   padding: 0.8rem;
   border: none;
@@ -117,7 +117,7 @@ body, html {
   transition: background-color 0.25s;
 }
 
-.login-box button:hover {
+.btn-login {
   background-color: #0f1566;
 }
 
@@ -161,12 +161,22 @@ body, html {
   animation: float 3s ease-in-out infinite;
 }
 
-#btn-back {
+.btn-back {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
   background-color: #6b71ca;
   transition: 1s;
+  color: white;
+  font-size: 1rem;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.25s;
 }
 
-#btn-back:hover {
+.btn-back:hover {
   background-color: #3e47bc;
   transition: 1s;
 }

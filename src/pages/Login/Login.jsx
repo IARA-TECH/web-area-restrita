@@ -59,10 +59,10 @@ export default function Login({ setAutenticado }) {
                 onChange={(e) => setSenha(e.target.value)}
               />
 
-              <button type="submit">ENTRAR</button>
+              <button type="submit" className="btn-login">ENTRAR</button>
               <button
                 type="button"
-                id="btn-back"
+                className="btn-back"
                 onClick={() => navigate(-1)}
               >
                 VOLTAR PARA PÁGINA INICIAL
