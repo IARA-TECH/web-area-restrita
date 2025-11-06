@@ -163,6 +163,10 @@ body, html {
 
 
 .btn-back {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
   width: 100%;
   padding: 0.8rem;
   border: none;

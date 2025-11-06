@@ -60,14 +60,13 @@ export default function Login({ setAutenticado }) {
               />
 
               <button type="submit" className="btn-login">ENTRAR</button>
-              </form>
-              <button
-                type="button"
+              <a 
+                href="http://localhost:8080" 
                 className="btn-back"
-                onClick={() => navigate(-1)}
               >
                 VOLTAR PARA PÁGINA INICIAL
-              </button> 
+              </a>
+              </form>
           </div>
         </div>
       </div>
